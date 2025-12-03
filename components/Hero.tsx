@@ -8,8 +8,14 @@ export const Hero: React.FC = () => {
     <section id="hero" className="min-h-screen flex pt-16 items-center relative overflow-hidden">
       {/* Background Effect */}
       <div className="absolute top-0 w-full h-screen -z-10">
-        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-60">
-             <iframe src="https://my.spline.design/glowingplanetparticles-HmCVKutonlFn3Oqqe6DI9nWi/" frameBorder="0" width="100%" height="100%" title="Spline Background"></iframe>
+        {/* Animated Gradient Background */}
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-600/10 via-transparent to-transparent animate-pulse" style={{animationDelay: '1s'}}></div>
+          {/* Floating orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
         {/* Gradient Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black z-10 pointer-events-none"></div>
